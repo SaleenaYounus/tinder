@@ -6,6 +6,7 @@
     <string name="register">Register</string>
     <string name="male">Male</string>
     <string name="name">name</string>
+    <string name="signout">SignOut</string>
 
 
 </resources>
