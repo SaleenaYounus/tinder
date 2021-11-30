@@ -1,0 +1,38 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007f65b5150f6e, pid=8560, tid=8598
+#
+# JRE version: OpenJDK Runtime Environment (11.0.10) (build 11.0.10+0-b96-7249189)
+# Java VM: OpenJDK 64-Bit Server VM (11.0.10+0-b96-7249189, mixed mode, tiered, compressed oops, g1 gc, linux-amd64)
+# Problematic frame:
+# J 3041 c2 jdk.internal.jimage.ImageLocation.decompress(Ljava/nio/ByteBuffer;)[J java.base@11.0.10 (153 bytes) @ 0x00007f65b5150f6e [0x00007f65b5150e40+0x000000000000012e]
+#
+# Core dump will be written. Default location: Core dumps may be processed with "/usr/share/apport/apport %p %s %c %d %P %E" (or dumping to /home/molu/AndroidStudioProjects/Tinder/core.8560)
+#
+# If you would like to submit a bug report, please visit:
+#   https://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -agentlib:jdwp=transport=dt_socket,server=n,suspend=y,address=127.0.0.1:45599 --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.prefs/java.util.prefs=ALL-UNNAMED --add-opens=java.prefs/java.util.prefs=ALL-UNNAMED --add-opens=java.base/java.nio.charset=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED -Xmx2048m -Dfile.encoding=UTF-8 -Duser.country=IN -Duser.language=en -Duser.variant org.gradle.launcher.daemon.bootstrap.GradleDaemon 7.0.2
+
+Host: Intel(R) Core(TM) i7-2670QM CPU @ 2.20GHz, 8 cores, 3G, Ubuntu 20.04.3 LTS
+Time: Sun Nov 28 23:04:56 2021 IST elapsed time: 587.976355 seconds (0d 0h 9m 47s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007f653800d000):  JavaThread "Daemon worker" [_thread_in_Java, id=8598, stack(0x00007f655aeec000,0x00007f655afed000)]
+
+Stack: [0x00007f655aeec000,0x00007f655afed000],  sp=0x00007f655afe42a0,  free space=992k
+Native frames: (J=compiled Java code, A=aot compiled Java code, j=interpreted, Vv=VM code, C=native code)
+J 3041 c2 jdk.internal.jimage.ImageLocation.decompress(Ljava/nio/ByteBuffer;)[J java.base@11.0.10 (153 bytes) @ 0x00007f65b5150f6e [0x00007f65b5150e40+0x000000000000012e]
+J 2655 c1 jdk.internal.jimage.BasicImageReader.getAttributes(I)[J java.base@11.0.10 (48 bytes) @ 0x00007f65ae045ab4 [0x00007f65ae045640+0x0000000000000474]
+J 1968 c1 jdk.internal.jimage.BasicImageReader.findLocation(Ljava/lang/String;Ljava/lang/String;)Ljdk/internal/jimage/ImageLocation; java.base@11.0.10 (115 bytes) @ 0x00007f65adee2bcc [0x00007f65adee2460+0x000000000000076c]
+J 1171 c1 jdk.internal.module.SystemModuleFinders$SystemModuleReader.findImageLocation(Ljava/lang/String;)Ljdk/internal/jimage/ImageLocation; java.base@11.0.10 (42 bytes) @ 0x00007f65add2fdbc [0x00007f65add2fae0+0x00000000000002dc]
+J 1967 c1 jdk.internal.module.SystemModuleFinders$SystemModuleReader.find(Ljava/lang/String;)Ljava/util/Optional; java.base@11.0.10 (54 bytes) @ 0x00007f65adee40d4 [0x00007f65adee4040+0x0000000000000094]
+j  jdk.internal.loader.BuiltinClassLoader$2.run()Ljava/util/List;+51 java.base@11.0.10
+j  jdk.internal.loader.BuiltinClassLoader$2.run()Ljava/lang/Object;+1 java.base@11.0.10
+v  ~StubRoutines::call_stub
+V  [libjvm.so+0x7724cf]
