@@ -162,7 +162,7 @@ public class MainActivity extends AppCompatActivity {
             public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
                 if(snapshot.exists()){
 
-                    cards Item = new cards(snapshot.getKey(),snapshot.child("name").getKey().toString());
+                    cards Item = new cards(snapshot.getKey(),snapshot.child("name").getValue().toString());
                     rowItems.add(Item);
                     arrayAdapter.notifyDataSetChanged();
                 }
