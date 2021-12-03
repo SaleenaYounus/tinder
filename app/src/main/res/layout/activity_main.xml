@@ -9,9 +9,9 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="SignOut"
+        android:text="@string/signout"
         android:onClick="LogoutUser"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints,UsingOnClickInXml" />
 
     <com.lorentzos.flingswipe.SwipeFlingAdapterView
         android:id="@+id/frame"
