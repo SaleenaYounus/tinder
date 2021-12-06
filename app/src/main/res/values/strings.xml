@@ -7,6 +7,8 @@
     <string name="male">Male</string>
     <string name="name">name</string>
     <string name="signout">SignOut</string>
+    <string name="settings" />
+    <string name="Settings">Settings</string>
 
 
 </resources>
